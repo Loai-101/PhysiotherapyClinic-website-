@@ -1,0 +1,626 @@
+/* Insurance Page Styles */
+.insurance-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fffe 0%, #f0fdf4 50%, #ecfdf5 100%);
+}
+
+/* Main insurance section */
+.insurance {
+  background: transparent;
+  padding: 5rem 0;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
+
+/* Visible state for animation */
+.insurance-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Container for insurance content */
+.insurance-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Insurance header section */
+.insurance-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Main insurance title */
+.insurance-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  position: relative;
+}
+
+/* Title underline effect */
+.insurance-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4ade80, #16a34a);
+  border-radius: 2px;
+}
+
+/* Insurance subtitle */
+.insurance-subtitle {
+  font-size: 1.3rem;
+  color: #5a6c7d;
+  margin: 0;
+  line-height: 1.8;
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Insurance content */
+.insurance-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* Insurance info section */
+.insurance-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Insurance section */
+.insurance-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Section title */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4ade80, #16a34a);
+  border-radius: 2px;
+}
+
+/* Section description */
+.section-description {
+  font-size: 1.2rem;
+  color: #6c757d;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Insurance grid layout */
+.insurance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Insurance card */
+.insurance-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.insurance-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: #4ade80;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Insurance logo */
+.insurance-logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #4ade80, #16a34a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.insurance-card:hover .insurance-logo {
+  transform: scale(1.1);
+}
+
+/* Insurance logo text */
+.insurance-logo-text {
+  font-size: 2.5rem;
+  color: white;
+}
+
+/* Insurance card content */
+.insurance-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Insurance plan name */
+.insurance-plan-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Insurance plan description */
+.insurance-plan-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #5a6c7d;
+  margin: 0;
+}
+
+/* Coverage list */
+.coverage-list {
+  margin-top: 1rem;
+}
+
+/* Coverage title */
+.coverage-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+}
+
+/* Coverage items */
+.coverage-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Coverage item */
+.coverage-item {
+  font-size: 0.9rem;
+  color: #5a6c7d;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.coverage-item::before {
+  content: '•';
+  color: #16a34a;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Services section */
+.services-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Services grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Service card */
+.service-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border-color: #4ade80;
+}
+
+/* Service icon */
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background: #4ade80;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+/* Service icon text */
+.service-icon-text {
+  font-size: 2rem;
+  color: white;
+}
+
+/* Service content */
+.service-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Service title */
+.service-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Service description */
+.service-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Contact section */
+.contact-section {
+  text-align: center;
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact section title */
+.contact-section .section-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 auto 1.5rem auto;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.contact-section .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4ade80, #16a34a);
+  border-radius: 2px;
+}
+
+/* Contact description */
+.contact-description {
+  font-size: 1.1rem;
+  color: #5a6c7d;
+  line-height: 1.6;
+  margin: 0 auto 2rem auto;
+  max-width: 600px;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Contact buttons */
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+/* Contact button */
+.contact-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 180px;
+}
+
+.contact-button.primary {
+  background: linear-gradient(135deg, #4ade80, #16a34a);
+  color: white;
+}
+
+.contact-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(74, 222, 128, 0.3);
+}
+
+.contact-button.secondary {
+  background: transparent;
+  color: #16a34a;
+  border: 2px solid #16a34a;
+}
+
+.contact-button.secondary:hover {
+  background: #16a34a;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Insurance companies section */
+.insurance-companies-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Insurance companies grid */
+.insurance-companies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Insurance company card */
+.insurance-company-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.insurance-company-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border-color: #4ade80;
+}
+
+/* Insurance company logo */
+.insurance-company-logo {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.insurance-company-card:hover .insurance-company-logo {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Responsive design for tablets */
+@media (max-width: 1024px) {
+  .insurance-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .insurance-companies-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .contact-section {
+    padding: 2.5rem 2rem;
+  }
+  
+  .contact-section .section-title {
+    font-size: 2rem;
+  }
+  
+  .contact-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-buttons {
+    gap: 1.2rem;
+  }
+  
+  .contact-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
+    min-width: 180px;
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .insurance {
+    padding: 3rem 0;
+  }
+  
+  .insurance-container {
+    padding: 0 1rem;
+  }
+  
+  .insurance-header {
+    margin-bottom: 3rem;
+  }
+  
+  .insurance-title {
+    font-size: 2rem;
+  }
+  
+  .insurance-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .insurance-content {
+    gap: 3rem;
+  }
+  
+  .insurance-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .insurance-card {
+    padding: 1.5rem;
+  }
+  
+  .insurance-logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .insurance-logo-text {
+    font-size: 2rem;
+  }
+  
+  .insurance-plan-name {
+    font-size: 1.3rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .service-card {
+    padding: 1.2rem;
+  }
+  
+  .service-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .service-icon-text {
+    font-size: 1.5rem;
+  }
+  
+  .service-title {
+    font-size: 1.1rem;
+  }
+  
+  .contact-section {
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .contact-section .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .contact-button {
+    width: 100%;
+    max-width: 280px;
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.6px;
+  }
+
+  .insurance-companies-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .insurance-company-card {
+    padding: 1rem;
+    min-height: 100px;
+  }
+  
+  .insurance-company-logo {
+    max-height: 60px;
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Physiotherapy Clinic",
+  "description": "Professional dental care services in Bahrain. Expert dental clinic providing comprehensive oral health solutions, cosmetic dentistry, and emergency dental care.",
+  "url": "https://dental-care-clinic.vercel.app",
+  "logo": "https://dental-care-clinic.vercel.app/dental-logo.png",
+  "image": "https://dental-care-clinic.vercel.app/dental-logo.png",
+  "telephone": "+973 17676765",
+  "email": "info@dentalcareclinic.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "PMI, Road 4574, Block 745, Building 2486",
+    "addressLocality": "Sanad",
+    "addressRegion": "Manama",
+    "addressCountry": "BH",
+    "postalCode": "745"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 26.0667,
+    "longitude": 50.5853
+  },
+  "openingHours": [
+    "Mo-Fr 08:00-18:00",
+    "Sa 09:00-15:00",
+    "Su 00:00-23:59"
+  ],
+  "priceRange": "$$",
+  "paymentAccepted": ["Cash", "Credit Card", "Insurance"],
+  "currenciesAccepted": "BHD",
+  "medicalSpecialty": "Dentistry",
+  "availableService": [
+    {
+      "@type": "MedicalProcedure",
+      "name": "General Dentistry",
+      "description": "Fillings, Crowns, Bridges, Veneers, Dentures, Deep Cleaning, Whitening"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Cosmetic Dentistry",
+      "description": "Bleaching, Composite or Ceramic Veneers, Crowns, Smile Design"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Pediatric Dentistry",
+      "description": "Children Speciality Dental Care from infancy through teen years"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Endodontics",
+      "description": "Microscopic Root Canal Treatment"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Oral Surgery",
+      "description": "Wisdom Teeth, Implant, Benign Tumor, Gum & Bone Surgery"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Laser Dentistry",
+      "description": "Advanced laser technology for precise and comfortable dental procedures"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Dental Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dental Checkup",
+          "description": "Comprehensive dental examination and consultation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Teeth Cleaning",
+          "description": "Professional dental hygiene and cleaning"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Emergency Dental Care",
+          "description": "24/7 emergency dental services"
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://www.facebook.com/dentalcareclinic",
+    "https://www.instagram.com/dentalcareclinic",
+    "https://www.linkedin.com/company/dental-care-clinic"
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Bahrain"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 26.0667,
+      "longitude": 50.5853
+    },
+    "geoRadius": "50000"
+  }
+}

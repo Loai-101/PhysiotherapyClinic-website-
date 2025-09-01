@@ -1,0 +1,110 @@
+/* Global App Styles */
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fluid media defaults */
+img,
+video,
+svg,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure videos cover containers where needed */
+.hero-video,
+.services-hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Body styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: #333333;
+  background: transparent;
+}
+
+/* Main App container */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  padding-top: 80px; /* Account for fixed header */
+  background: transparent;
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+  animation: fadeInContent 0.5s ease-in;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-content.content-visible {
+  animation: fadeInContent 0.5s ease-in;
+}
+
+/* Hide main content completely during loading */
+.App {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+/* Page containers */
+.home-page,
+.services-page,
+.team-page,
+.contact-page,
+.insurance-page {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, #f8fffe 0%, #f0fdf4 50%, #ecfdf5 100%) !important;
+}
+
+/* Code font for any code elements */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #16a34a;
+  outline-offset: 2px;
+}

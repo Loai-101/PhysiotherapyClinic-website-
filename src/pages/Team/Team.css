@@ -1,0 +1,665 @@
+/* Team Page Styles */
+.team-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fffe 0%, #f0fdf4 50%, #ecfdf5 100%);
+}
+
+/* Main team section */
+.team {
+  background: transparent;
+  padding: 6rem 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+/* Visible state for animation */
+.team-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Container for team content */
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Team header section */
+.team-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Main team title */
+.team-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  position: relative;
+}
+
+/* Title underline effect */
+.team-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4ade80, #16a34a);
+  border-radius: 2px;
+}
+
+/* Team subtitle */
+.team-subtitle {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Team content */
+.team-content {
+  margin-top: 3rem;
+}
+
+/* Doctors grid */
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Doctor card */
+.doctor-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.doctor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: #4ade80;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Doctor image */
+.doctor-image {
+  margin-bottom: 1.5rem;
+}
+
+/* Doctor avatar emoji */
+.doctor-avatar {
+  font-size: 4rem;
+  display: block;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.doctor-card:hover .doctor-avatar {
+  transform: scale(1.1);
+}
+
+/* Doctor avatar image */
+.doctor-avatar-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 3px solid #4ade80;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.doctor-card:hover .doctor-avatar-image {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: #16a34a;
+}
+
+/* Doctor info */
+.doctor-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Doctor name */
+.doctor-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Doctor specialty */
+.doctor-specialty {
+  font-size: 1rem;
+  color: #16a34a;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Doctor popup overlay */
+.doctor-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Doctor popup */
+.doctor-popup {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Popup close button */
+.popup-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #6c757d;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.popup-close-btn:hover {
+  background: #f8f9fa;
+  color: #2c3e50;
+  transform: scale(1.1);
+}
+
+/* Popup content */
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Popup header */
+.popup-header {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+/* Popup avatar emoji */
+.popup-avatar {
+  font-size: 5rem;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+/* Popup avatar image */
+.popup-avatar-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Popup name */
+.popup-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+}
+
+/* Popup specialty */
+.popup-specialty {
+  font-size: 1.2rem;
+  color: #16a34a;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Popup details */
+.popup-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Popup experience */
+.popup-experience {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #16a34a;
+}
+
+.popup-experience h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+}
+
+.popup-experience p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Popup description */
+.popup-description {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #4ade80;
+}
+
+.popup-description h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 0.8rem 0;
+}
+
+.popup-description p {
+  font-size: 1rem;
+  color: #5a6c7d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Popup skills */
+.popup-skills {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #4caf50;
+}
+
+.popup-skills h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+}
+
+/* Skills grid */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* Skill tag */
+.skill-tag {
+  background: #4caf50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive design for tablets */
+@media (max-width: 1024px) {
+  .team {
+    padding: 5rem 0;
+  }
+  
+  .team-container {
+    padding: 0 1.5rem;
+  }
+  
+  .doctors-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .doctor-card {
+    padding: 1.5rem;
+  }
+  
+  .doctor-avatar {
+    font-size: 3.5rem;
+  }
+  
+  .doctor-avatar-image {
+    width: 75px;
+    height: 75px;
+    border-width: 2px;
+  }
+  
+  .doctor-name {
+    font-size: 1.2rem;
+  }
+  
+  .doctor-specialty {
+    font-size: 0.9rem;
+  }
+}
+
+/* iPad specific fixes */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .doctor-avatar-image {
+    width: 90px;
+    height: 90px;
+    border-width: 3px;
+  }
+  
+  .doctor-name {
+    font-size: 1.3rem;
+  }
+  
+  .doctor-specialty {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .team {
+    padding: 4rem 0;
+  }
+  
+  .team-container {
+    padding: 0 1rem;
+  }
+  
+  .team-title {
+    font-size: 2rem;
+  }
+  
+  .team-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .doctor-card {
+    padding: 1.2rem;
+  }
+  
+  .doctor-avatar {
+    font-size: 3rem;
+  }
+  
+  .doctor-avatar-image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .doctor-name {
+    font-size: 1.1rem;
+  }
+  
+  .doctor-specialty {
+    font-size: 0.9rem;
+  }
+  
+  .doctor-popup {
+    padding: 2rem;
+    margin: 1rem;
+    max-width: 95%;
+  }
+  
+  .popup-header {
+    margin: -2rem -2rem 0 -2rem;
+    padding: 2rem 2rem 1.5rem 2rem;
+  }
+  
+  .popup-avatar {
+    font-size: 4.5rem;
+  }
+  
+  .popup-avatar-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .popup-name {
+    font-size: 1.6rem;
+  }
+  
+  .popup-specialty {
+    font-size: 1.1rem;
+  }
+  
+  .popup-experience,
+  .popup-description,
+  .popup-skills {
+    padding: 1.2rem;
+  }
+  
+  .popup-experience h4,
+  .popup-description h4,
+  .popup-skills h4 {
+    font-size: 1rem;
+  }
+  
+  .popup-experience p,
+  .popup-description p {
+    font-size: 0.9rem;
+  }
+  
+  .skill-tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .popup-close-btn {
+    top: 0.8rem;
+    right: 1.2rem;
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctors-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Team Call to Action Section Styles */
+.team-cta-section {
+  background: linear-gradient(135deg, #4ade80 0%, #16a34a 100%);
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+}
+
+.team-cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.team-cta-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+.team-cta-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+}
+
+.team-cta-description {
+  font-size: 1.2rem;
+  margin: 0 0 2.5rem 0;
+  line-height: 1.6;
+  opacity: 0.9;
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.team-cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.team-cta-button-primary {
+  background: #ffffff;
+  color: #16a34a;
+  border-color: #ffffff;
+}
+
+.team-cta-button-primary:hover {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.team-cta-button-secondary {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.team-cta-button-secondary:hover {
+  background: #ffffff;
+  color: #16a34a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive design for Team CTA section */
+@media (max-width: 768px) {
+  .team-cta-section {
+    padding: 3rem 0;
+  }
+  
+  .team-cta-title {
+    font-size: 2rem;
+  }
+  
+  .team-cta-description {
+    font-size: 1.1rem;
+  }
+  
+  .team-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .team-cta-button {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
